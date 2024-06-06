@@ -15,14 +15,22 @@
         <t1>
         <input type="text" id="i1" class="in" placeholder="Name" autocomplete="off">
         <div class="pass"><input type="password" id="i2" class="in" placeholder="Password" autocomplete="off" >
-            <img src="eye.png" alt="" onclick="txxxt()">
+            <img src="eye.png" alt="" onclick="txxxt">
         </div>
-        <button  class="btn" id="bt">Login</button>
-        <t2>forget password</t2>
+        <button  class="btn" id="bt" onclick="submit()">Login</button>
+        <t2 id="t2">forget password</t2>
     </t1>
     </section>
 </body>
 <script>
+let savename = localStorage.getItem(name);
+    console.log(savename);
+    $(window).on('beforeunload', function() {
+    console.log("reloaded"); // Your custom message here
+});
+
+
+
 const txxxt = ()=>{
     const tyype = $('#i2').prop('type');
     console.log(tyype);
@@ -30,17 +38,39 @@ const txxxt = ()=>{
     $('#i2').prop('type',tp);
 };
 
-
+function submit(){ 
 const a = $('#bt').on('click',()=>{
-    alert("clicked");
     const name = btoa($('#i1').val());
     console.log(name);
+    localStorage.setItem('name',name);
     const pass = btoa(  $('#i2').val());
     console.log(pass);
+    localStorage.setItem('pass',pass);
     if(name == "QW1pYW5z" && pass == "Nzg2Nzg2"){
         window.location.href="index.html";
+    }else{
+        $('#t2').html("Incorrect password");
     }
 })
+};
+
+ const b =$(this).on('keydown',(e)=>{
+     if(e.which == 13){
+        const name = btoa($('#i1').val());
+        console.log(name);
+        localStorage.setItem('name',name);
+        const pass = btoa(  $('#i2').val());
+        console.log(pass);
+        localStorage.setItem('pass',pass);
+        if(name == "QW1pYW5z" && pass == "Nzg2Nzg2"){
+        window.location.href="index.html";
+        }else{
+        $('#t2').html("Incorrect password");
+        }
+        console.log("hi")
+    }
+});
+
 
 
 </script>
