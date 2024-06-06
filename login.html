@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <section id="S1"> 
+        <!-- <img src="download.png" alt="logo"> -->
+        <p2 id="H1">TSEC</p2>
+        <t1>
+        <input type="text" id="i1" class="in" placeholder="Name" autocomplete="off">
+        <div class="pass"><input type="password" id="i2" class="in" placeholder="Password" autocomplete="off" >
+            <img src="eye.png" alt="" onclick="txxxt()">
+        </div>
+        <button  class="btn" id="bt">Login</button>
+        <t2>forget password</t2>
+    </t1>
+    </section>
+</body>
+<script>
+const txxxt = ()=>{
+    const tyype = $('#i2').prop('type');
+    console.log(tyype);
+    const tp = tyype == 'password' ? 'text' : 'password';
+    $('#i2').prop('type',tp);
+};
+
+
+const a = $('#bt').on('click',()=>{
+    alert("clicked");
+    const name = btoa($('#i1').val());
+    console.log(name);
+    const pass = btoa(  $('#i2').val());
+    console.log(pass);
+    if(name == "QW1pYW5z" && pass == "Nzg2Nzg2"){
+        window.location.href="index.html";
+    }
+})
+
+
+</script>
+</html>
