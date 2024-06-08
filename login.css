@@ -8,7 +8,7 @@ body {
 }
 
 #S1 {
-    height: 500px;
+    /* height: 500px; */
     width: 90%;
     max-width: 400px;
     background-color: yellowgreen;
@@ -17,7 +17,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
 #H1 {
