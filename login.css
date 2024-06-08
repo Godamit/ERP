@@ -28,6 +28,12 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
 }
+a{
+    text-decoration: none;
+    color: black;
+    outline: none;
+
+}
 
 .input-container {
     width: 100%;
@@ -100,6 +106,7 @@ button {
 
 p#t3{
    color: rgb(106, 106, 240); 
+   cursor: pointer;
 }
 
 div.inc2{
@@ -144,4 +151,3 @@ div.inc{
         font-size: 12px;
     }
 }
-</style>

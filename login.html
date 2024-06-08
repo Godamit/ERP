@@ -11,7 +11,7 @@
 </head>
 <body>
     <section id="S1"> 
-        <p id="H1">TSEC</p>
+        <p id="H1"><a href="https://tsec.edu/">TSEC</a></p>
         <div class="input-container">
             <input type="text" id="i1" class="in" placeholder="Name" autocomplete="off">
             <div class="pass">
@@ -20,64 +20,10 @@
             </div>
             <div class="inc"><p id="t2"></p></div>
             <button class="btn" id="bt" onclick="submitForm()">Login</button>
-            <div class="inc2"><p id="t3">forget password?</p></div>
+            <div class="inc2"><p id="t3" onclick="forget();">forget password?</p></div>
         </div>
     </section>
 
-    <script>
-        let savedName = localStorage.getItem('name');
-        console.log(savedName);
-
-        $(window).on('beforeunload', function() {
-            console.log("reloaded");
-        });
-
-        const togglePasswordVisibility = () => {
-            const type = $('#i2').prop('type');
-            const newType = type === 'password' ? 'text' : 'password';
-            const imgSrc = newType  == 'password' ? 'eyeclose.png' : 'eye.png';
-            $('#i2').prop('type', newType);
-            $('.pass img').prop('src',imgSrc);
-        };
-
-        function submitForm() {
-            const name = btoa($('#i1').val());
-            const pass = btoa($('#i2').val());
-
-            localStorage.setItem('name', name);
-            localStorage.setItem('pass', pass);
-            if(name == ""){
-                $('#t2').html("Empty Username");
-            }else if(pass == ""){
-                $('#t2').html("Empty Password");
-            }else{ 
-                if(name === "QW1pYW5z"){
-                    if(pass === "Nzg2Nzg2"){
-                        window.location.href = "index.html";
-                    }else{
-                        $('#t2').html("Invalid Password");
-                    }
-                }else if(pass === "Nzg2Nzg2"){
-                        $('#t2').html("Invalid Username");
-                }else{
-                    $('#t2').html("Incorrect Credentials");
-                    
-                }
-
-                }
-            }
-                // if (name === "QW1pYW5z" && pass === "Nzg2Nzg2") {
-            //     window.location.href = "index.html";
-            // } else {
-            //     $('#t2').html("Invalid Credentials");
-            // }
-        
-
-        $(this).on('keydown', (e) => {
-            if (e.which === 13) {
-                submitForm();
-            }
-        });
-    </script>
+    <script src="login.js"></script>
 </body>
 </html>
