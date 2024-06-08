@@ -5,6 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #S1 {
@@ -21,7 +22,7 @@ body {
 }
 
 #H1 {
-    margin-bottom: 80px;
+    margin-bottom: 20px;
     font-size: 5rem;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -92,13 +93,29 @@ button {
     margin-left: 5px;
     color: brown;
     text-align: left;
-    position: relative;
-    /* right: 35%; */
+
+}
+
+
+
+p#t3{
+   color: rgb(106, 106, 240); 
+}
+
+div.inc2{
+    text-align: right;
+    width: 100%;
+}
+
+div.inc{
+    width: 100%;
+    text-align: left;
 }
 
 @media (max-width: 768px) {
     #H1 {
         font-size: 3rem;
+        
     }
 
     .in, button {
@@ -106,9 +123,13 @@ button {
         font-size: 14px;
     }
 
-    #S1{
-        /* height: 400px; */
+    #t3,#t2{
+        font-size: 12px;
     }
+    .pass img{
+        margin-top: 5px;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -116,9 +137,7 @@ button {
         font-size: 4rem;
     }
     
-    #S1{
-
-    }
+    
 
     .in, button {
         height: 30px;
