@@ -4,75 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="login.css">
+    <!-- <link rel="stylesheet" href="login.css"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body {
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
+        #S1 {
+            width: 90%;
+            max-width: 400px;
+            background-color: yellowgreen;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #H1 {
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+        }
+
+        .input-container {
+            width: 100%;
+            background-color: lightgreen;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .pass {
+            position: relative;
+            width: 100%;
+        }
+
+        .pass img {
+            position: absolute;
+            height: 25px;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .in {
+            margin-top: 10px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            height: 40px;
+            padding: 0 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+
+        input[type='password'] {
+            padding-right: 40px;
+        }
+
+        button {
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            height: 40px;
+            background-color: black;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+        }
+
+        #t2 {
+            font-weight: bold;
+            font-size: 13px;
+            margin-top: 10px;
+            color: brown;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            #H1 {
+                font-size: 2rem;
+            }
+
+            .in, button {
+                height: 35px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #H1 {
+                font-size: 1.5rem;
+            }
+
+            .in, button {
+                height: 30px;
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
 <body>
     <section id="S1"> 
-        <p2 id="H1">TSEC</p2>
-        <t1>
-        <input type="text" id="i1" class="in" placeholder="Name" autocomplete="off">
-        <div class="pass">
-            <input type="password" id="i2" class="in" placeholder="Password" autocomplete="off" >
-            <img src="eye.png" alt="" onclick="txxxt()">
+        <p id="H1">TSEC</p>
+        <div class="input-container">
+            <input type="text" id="i1" class="in" placeholder="Name" autocomplete="off">
+            <div class="pass">
+                <input type="password" id="i2" class="in" placeholder="Password" autocomplete="off">
+                <img src="eye.png" alt="Show/Hide Password" onclick="togglePasswordVisibility()">
+            </div>
+            <p id="t2">forget password</p>
+            <button class="btn" id="bt" onclick="submitForm()">Login</button>
         </div>
-        <t2 id="t2">forget password</t2>
-        <button  class="btn" id="bt" onclick="submit()">Login</button>
-        
-    </t1>
     </section>
-</body>
-<script>
-let savename = localStorage.getItem(name);
-    console.log(savename);
-    $(window).on('beforeunload', function() {
-    console.log("reloaded"); // Your custom message here
-});
 
+    <script>
+        let savedName = localStorage.getItem('name');
+        console.log(savedName);
 
+        $(window).on('beforeunload', function() {
+            console.log("reloaded");
+        });
 
-const txxxt = ()=>{
-    const tyype = $('#i2').prop('type');
-    console.log(tyype);
-    const tp = tyype == 'password' ? 'text' : 'password';
-    $('#i2').prop('type',tp);
-};
+        const togglePasswordVisibility = () => {
+            const type = $('#i2').prop('type');
+            const newType = type === 'password' ? 'text' : 'password';
+            $('#i2').prop('type', newType);
+        };
 
-function submit(){ 
-const a = $('#bt').on('click',()=>{
-    const name = btoa($('#i1').val());
-    console.log(name);
-    localStorage.setItem('name',name);
-    const pass = btoa(  $('#i2').val());
-    console.log(pass);
-    localStorage.setItem('pass',pass);
-    if(name == "QW1pYW5z" && pass == "Nzg2Nzg2"){
-        window.location.href="index.html";
-    }else{
-        $('#t2').html("Incorrect password");
-    }
-})
-};
+        function submitForm() {
+            const name = btoa($('#i1').val());
+            const pass = btoa($('#i2').val());
 
- const b =$(this).on('keydown',(e)=>{
-     if(e.which == 13){
-        const name = btoa($('#i1').val());
-        console.log(name);
-        localStorage.setItem('name',name);
-        const pass = btoa(  $('#i2').val());
-        console.log(pass);
-        localStorage.setItem('pass',pass);
-        if(name == "QW1pYW5z" && pass == "Nzg2Nzg2"){
-        window.location.href="index.html";
-        }else{
-        $('#t2').html("Incorrect password");
+            localStorage.setItem('name', name);
+            localStorage.setItem('pass', pass);
+
+            if (name === "QW1pYW5z" && pass === "Nzg2Nzg2") {
+                window.location.href = "index.html";
+            } else {
+                $('#t2').html("Incorrect password");
+            }
         }
-        console.log("hi")
-    }
-});
 
-
-
-</script>
+        $(this).on('keydown', (e) => {
+            if (e.which === 13) {
+                submitForm();
+            }
+        });
+    </script>
+</body>
 </html>
