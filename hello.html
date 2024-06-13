@@ -1,4 +1,12 @@
-body {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     padding: 0;
@@ -10,7 +18,7 @@ body {
     overflow: hidden;
     position: fixed;
     width: 100%;
-    /* height: 6vh; */
+    height: 6vh;
 }
 
 .navbar-container {
@@ -18,7 +26,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:5px 10px;
+    padding: 0px 20px;
 }
 
 .logo a {
@@ -33,7 +41,6 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    /* opacity: 0%; */
 }
 
 .nav-item {
@@ -45,7 +52,7 @@ body {
     color: white;
     text-decoration: none;
     position: relative;
-    padding: 5px 0px;
+    padding: 5px 10px;
     display: block;
     transition: background-color 0.3s;
 }
@@ -70,32 +77,31 @@ body {
     color: #ffcc00; /* Optional: Change text color on hover */
 }
 
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
 
+    .icons {
+        display: flex;
+    }
 
+    .logo {
+        display: none;
+    }
 
-
- 
-
-ul.logos{
-    display: flex;
-    text-decoration: none;
-    list-style-type: none;
-    padding: 0;
+    .logo2 {
+        display: block;
+        color: whitesmoke;
+        opacity: 100%;
+    }
 }
 
-.logo2{
+.logo2 {
     display: none;
 }
 
-
-.logo1 a{
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.logo2 a{
+.logo2 a {
     color: whitesmoke;
     text-decoration: none;
     font-size: 1.5em;
@@ -145,7 +151,7 @@ ul.logos{
 .icons {
     display: none;
     height: 20px;
-    /* width: 20px; */
+    width: 20px;
     padding: 10px;
     margin-bottom: 20px;
     cursor: pointer;
@@ -170,30 +176,33 @@ ul.logos{
     margin-left: 5px;
 }
 
-
-
-
-@media (max-width: 768px) {
-    .nav-menu{
-        display: none;
-    }
-
-    .logo1{
-        display: none;
-    }
-    .logo2{
-        display: block;
-    }
-
-    .icons{
-        display: flex;
-    }
-    
-}
-
-@media (max-width: 900px) {
-    .logo1 a{
-        font-size: 1rem;
-    }
-
-}
+</style>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="#">College ERP</a>
+            </div>
+            <div class="logo2">
+                <a href="#">ERP</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Courses</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Grades</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Attendance</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Profile</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Logout</a></li>
+            </ul>
+            <div class="icons">
+                <img id="im1" src="icon1.png" alt="icon1">
+                <img id="im2" src="icon2.png" alt="icon2">
+                <img id="im5" src="icon5.png" alt="icon5">
+            </div>
+        </div>
+    </nav>
+    <div class="head"></div>
+    <div class="main"></div>
+    <div class="foot"></div>
+</body>
+</html>
