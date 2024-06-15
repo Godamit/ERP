@@ -3,206 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bill</title>
+    <link rel="stylesheet" href="stylesbill.css">
 </head>
-<style>
-    body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Navbar CSS */
-.navbar {
-    background-color: #037171;
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-    height: 6vh;
-}
-
-.navbar-container {
-    height: 6vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 20px;
-}
-
-.logo a {
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.nav-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.nav-item {
-    margin-left: 20px;
-    position: relative;
-}
-
-.nav-link {
-    color: white;
-    text-decoration: none;
-    position: relative;
-    padding: 5px 10px;
-    display: block;
-    transition: background-color 0.3s;
-}
-
-.nav-link::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: yellow;
-    transition: all 0.8s ease-in;
-    transform: translateX(-50%);
-}
-
-.nav-link:hover::before {
-    width: 100%;
-}
-
-.nav-link:hover {
-    color: #ffcc00; /* Optional: Change text color on hover */
-}
-
-@media (max-width: 768px) {
-    .nav-menu {
-        display: none;
-    }
-
-    .icons {
-        display: flex;
-    }
-
-    .logo {
-        display: none;
-    }
-
-    .logo2 {
-        display: block;
-        color: whitesmoke;
-        opacity: 100%;
-    }
-}
-
-.logo2 {
-    display: none;
-}
-
-.logo2 a {
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.head {
-    height: 6vh;
-    background-color: #03312e;
-}
-
-.main {
-    background-color: #02C3BD;
-    height: 88vh;
-}
-
-.foot {
-    background-color: #03312e;
-    height: 6vh;
-}
-
-.profile {
-    background-color: #009F93;
-    height: 15rem;
-    width: 15rem;
-    position: relative;
-    display: flex;
-    float: right;
-}
-
-#X {
-    position: relative;
-    height: 20px;
-    width: 20px;
-    left: 90%;
-}
-
-.pfp {
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
-    background-color: whitesmoke;
-    margin-top: 20px;
-    margin-left: 0px;
-}
-
-.icons {
-    display: none;
-    height: 20px;
-    width: 20px;
-    padding: 10px;
-    margin-bottom: 20px;
-    cursor: pointer;
-}
-
-#im1 {
-    height: 40px;
-    width: 40px;
-}
-
-#im2 {
-    height: 30px;
-    width: 30px;
-    margin-top: 8px;
-    margin-left: 5px;
-}
-
-#im5 {
-    height: 30px;
-    width: 30px;
-    margin-top: 8px;
-    margin-left: 5px;
-}
-
-</style>
 <body>
-    <nav class="navbar">
-        <div class="navbar-container">
-            <div class="logo">
-                <a href="#">College ERP</a>
-            </div>
-            <div class="logo2">
-                <a href="#">ERP</a>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Courses</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Grades</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Attendance</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Profile</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Logout</a></li>
-            </ul>
-            <div class="icons">
-                <img id="im1" src="icon1.png" alt="icon1">
-                <img id="im2" src="icon2.png" alt="icon2">
-                <img id="im5" src="icon5.png" alt="icon5">
-            </div>
-        </div>
-    </nav>
-    <div class="head"></div>
-    <div class="main"></div>
-    <div class="foot"></div>
+    <div class="invoice">
+        <header>
+            <h1>TAX INVOICE</h1>
+            <p class="contact-info">Mob.: 8446725600</p>
+            <h2>SHIVA LOGISTICS</h2>
+            <p class="service-info">Full & Part Load Service All Over India.</p>
+            <address>
+                Gala No 108, 1st, Aaren Palze, Revenue Village, Sativali,<br>
+                Vasai East, Dist Palghar - 401208.<br>
+                Email: <a href="mailto:shivalogisticsvasai@gmail.com">shivalogisticsvasai@gmail.com</a>
+            </address>
+            <p class="pan">PAN NO: AUFPP7908P</p>
+        </header>
+        <section class="billing-info">
+            <p>To,</p>
+            <h3>Apex Luminaries Private Limited</h3>
+            <address>
+                Plot No. 86, KIADB Industrial Area,<br>
+                Malur, Karnataka.<br>
+                Pin: 563130.
+            </address>
+            <p>Party’s GST No.: </p>
+            <p>Bill No.: 0143</p>
+            <p>Date: 15/04/2024</p>
+        </section>
+        <table class="bill-details">
+            <thead>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>DATE</th>
+                    <th>L.R.No.</th>
+                    <th>PARTICULARS</th>
+                    <th>TON</th>
+                    <th>HAMALI</th>
+                    <th>AMOUNT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>16/03/2024</td>
+                    <td>Nallasopara to Malur</td>
+                    <td></td>
+                    <td></td>
+                    <td>45000/-</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>24/03/2024</td>
+                    <td>Nallasopara to Malur</td>
+                    <td></td>
+                    <td></td>
+                    <td>45000/-</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>27/03/2024</td>
+                    <td>Nallasopara to Malur</td>
+                    <td></td>
+                    <td></td>
+                    <td>30000/-</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>13/04/2024</td>
+                    <td>Nallasopara to Malur</td>
+                    <td></td>
+                    <td></td>
+                    <td>60000/-</td>
+                </tr>
+                <tr class="total">
+                    <td colspan="6">Total</td>
+                    <td>180000/-</td>
+                </tr>
+            </tbody>
+        </table>
+        <section class="bank-details">
+            <p>Bank: APNA SAHAKARI BANK LTD.</p>
+            <p>Branch: VASAI (EAST)</p>
+            <p>Account No.: 018012100000574</p>
+            <p>IFSC Code: ASBL0000018</p>
+        </section>
+        <footer>
+            <p>Rupees: One lakh eighty thousand only.</p>
+            <p>For Shiva Logistics</p>
+        </footer>
+    </div>
 </body>
 </html>
