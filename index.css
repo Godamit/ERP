@@ -1,5 +1,5 @@
 body {
-    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -72,7 +72,14 @@ body {
 
 
 
+.logo1{
+    display: flex;
+    align-items: center;
+}
 
+.logo1 img{
+    height: 40px;
+}
 
  
 
@@ -80,7 +87,7 @@ ul.logos{
     display: flex;
     text-decoration: none;
     list-style-type: none;
-    padding-top: 10px;
+    /* padding-top: 10px; */
     padding-left: 0px;
 }
 
@@ -90,10 +97,12 @@ ul.logos{
 
 
 .logo1 a{
+    margin-left: 15px;
     color: whitesmoke;
     text-decoration: none;
     font-size: 1.5em;
     font-weight: bold;
+    
 }
 
 .logo2 a{
@@ -105,19 +114,69 @@ ul.logos{
 }
 
 .head {
-    height: 6vh;
+    height: 8vh;
     background-color: #412234;
 }
 
+.head2 {
+    height: 6vh;
+    width: 100vw;
+    background-color: #5d3fb3;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+} 
+
+.head2 img{
+    height: 25px;
+    width: 25px;
+    margin-left: 10px;
+    margin-top: 5px;
+    
+}
+
+#d2{
+    color: white;
+    margin-left: 10px;
+    /* margin-top: 6px; */
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .main {
-    background-color: #B49FCC;
+    background-color: #FFF;
     height: 88vh;
 }
 
 .foot {
-    background-color: #03312e;
-    height: 6vh;
+    background-color: #100b1d;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    text-align: center;
+    height: 12vh;
+    padding: 0;
+    margin: 0;
 }
+
+.foot p{
+    color: grey;
+    /* margin: 0;*/
+    /* margin: 0; */
+    /* padding: 0; */
+    margin-top: 5px;
+    /* height: 20vh; */
+    width: 100vw;
+    font-size: 0.8rem;
+}
+
+#des{
+    color: white;
+}
+
+
 
 .profile {
     background-color: #009F93;
@@ -174,7 +233,7 @@ ul.logos{
     margin-left: 0px;
 }
 
- #im4 , #im6{
+#im4 , #im6{
     height: 30px;
     width: 30px;
     margin-top: 8px;
@@ -186,6 +245,16 @@ ul.logos{
     width: 28px;
     margin-top: 9px;
 
+}
+
+.txt1{
+    text-align: center;
+    height: 100%;
+
+}
+
+.foot p{
+    color: grey;
 }
 
 
