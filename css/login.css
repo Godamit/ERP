@@ -28,11 +28,15 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
 }
-a{
+#H1 a{
     text-decoration: none;
     color: black;
     outline: none;
 
+}
+
+#sign a{
+    text-decoration: none;
 }
 
 .input-container {
@@ -52,11 +56,11 @@ a{
     width: 100%;
 }
 
-.pass img {
+#img {
     position: absolute;
     height: 25px;
     right: 10px;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     cursor: pointer;
 }
@@ -107,11 +111,15 @@ button {
 p#t3{
    color: rgb(106, 106, 240); 
    cursor: pointer;
+   margin: 0;
+   /* padding: 0; */
 }
 
 div.inc2{
     text-align: right;
     width: 100%;
+    height: 25px;
+    margin-bottom: 30px;
 }
 
 div.inc{
@@ -133,8 +141,8 @@ div.inc{
     #t3,#t2{
         font-size: 12px;
     }
-    .pass img{
-        margin-top: 5px;
+    #img{
+        margin-bottom: 5px;
     }
 
 }

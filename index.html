@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./css/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 <body>
@@ -14,7 +15,7 @@
             <div class="navbar-container">
                 <ul class="logos">
                     <li class="logo1">
-                        <img src="icc.png"><a href="https://tsec.edu/" class="a1">Thadomal Shahani Engineering College</a>
+                        <img src="img/logo-removebg-preview.png"><a href="https://tsec.edu/" class="a1">ELECTROVERSE.COMM</a>
                     </li>
                     <li class="logo2">
                         <a href="https://tsec.edu/" class="a2">TSEC</a>
@@ -27,61 +28,94 @@
                         <a href="#" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Courses</a>
+                        <div class="dropdown">
+                            <div onclick="myFunction()" class="dropbtn">About
+                                <i class="fa-solid fa-caret-down" style="color: #ffffff;" id="dropicon"></i>
+                            </div>
+                            <div id="myDropdown" class="dropdown-content">
+                              <a href="#home">Home</a>
+                              <a href="#about">About</a>
+                              <a href="#contact">Contact</a>
+                            </div>
+                          </div>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Grades</a>
+                        <a href="#" class="nav-link">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Attendance</a>
+                        <a href="#" class="nav-link">Support</a>
                     </li>
+                    
                     <li class="nav-item">
-                        <a href="#" class="nav-link" id="i5">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Logout</a>
+                        <a href="#" class="nav-link" id="login">Login</a>
                     </li>
                 </ul>
                 <div class="icons">
                     <div class="ic">
-                        <img src="home.png" id="im1">
+                        <img src="img/home.png" id="im1">
                     </div>
                     <div class="ic">
-                        <img src="course.png" id="im2">
+                        <img src="img/course.png" id="im2">
                     </div>
                     <div class="ic">
-                        <img src="grade.png"  id="im3">
+                        <img src="img/grade.png"  id="im3">
                     </div>
                     <div class="ic">
-                        <img src="attend.png" id="im4">
+                        <img src="img/attend.png" id="im4">
                     </div>
                     <div class="ic">
-                        <img src="pfp.png" id="im5">
+                        <img src="img/pfp.png" id="im5">
                     </div>
                     <div class="ic">
-                        <img src="log.png" id="im6">
+                        <img src="img/log.png" id="im6">
                     </div>
                 </div>
             </div>
         </nav>
     </header>
     <ul class="head2">
-        <li id="d1"><img src="dash.png" alt="" ></li>
+        <li id="d1"><img src="img/dash.png" alt="" ></li>
         <li id="d2">Dashboard</li>
     </ul>
     
     <section class="main">
         
         <div class="profile">
-            <img src="X.png" id="X">
+            <img src="img/X.png" id="X">
             <div class="pfp"></div>
         <div class="user">hiiii</div>
         </div>
     </section>
+    <section class="mainbody" id ="Hero1" >
+        <!-- <img src="./img/sky.jpg" alt=""> -->
+        <section class="submain">
+
+<div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+        </section>
+        
+
+    </section>
+    <section class="mainbody" id ="Hero1" >
+        <!-- <img src="./img/sky.jpg" alt=""> -->
+        <section class="submain">
+
+        </section>
+        
+
+    </section>
+    
     <footer class="foot">
         <p>Copyright © 2024 Thadomal Shahani Engineering College.<br>
         (TSEC). All Rights Reserved
         <br><p2 id="des">Designed and handled by Amians</p2></p>
+        <button><a href="new.html">hiii</a></button>
     </footer>
 </body>
 <script src="index.js"></script>
