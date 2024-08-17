@@ -6,6 +6,10 @@
     <title>Godamit</title>
     <link rel="stylesheet" href="./css/electro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
 </head>
 <body>
     <div class="header">
@@ -38,6 +42,7 @@
             </div>
         </nav>
     </div>
+
     <div class="back"></div>
 
     <div class="menubar">
@@ -46,41 +51,71 @@
         </div>
     </div>
 
-
-    <section class="slideshowmain">
-            <!-- Slideshow container -->
-    <div class="slideshow-container">
-
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-            <!-- <div class="numbertext">1 / 3</div> -->
-            <img src="./img/hiii.jpg" style="width:100%">
-            <!-- <div class="text">Caption Text</div> -->
+    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+      <!-- Carousel wrapper -->
+      <div class="relative h-[550px] overflow-hidden -lg md:h-[700px]">
+           <!-- Item 1 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="./img/distribution.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          </div>
+          <!-- Item 2 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="./img/inuguration.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          </div>
+          <!-- Item 3 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="./img/principle_invite.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          </div>
+      </div>
+  </div>
+  
+  
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+            <!-- <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button> -->
+            <!-- <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button> -->
         </div>
-    
-        <div class="mySlides fade">
-            <!-- <div class="numbertext">2 / 3</div> -->
-            <img src="./img/sky.jpg" style="width:100%">
-            <!-- <div class="text">Caption Two</div> -->
-        </div>
-    
-        <div class="mySlides fade">
-            <!-- <div class="numbertext">3 / 3</div> -->
-            <img src="./img/bggg.jpg" style="width:100%">
-            <!-- <div class="text">Caption Three</div> -->
-        </div>
-
-        <div style="text-align:center" class="dots">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
+        <!-- Slider controls -->
+        <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
     </div>
-    <br>
-    
-    <!-- The dots/circles -->
 
+
+
+
+    <section class="abt">
+      <section class="abtinfo">
+        <section class="abthead">
+          <h1>WHAT IS ELECTROVERSE TSEC ?</h1>
+        </section>
+        <section class="abttxt">
+          Electroverse.Comm-TSEC, A Technical Committee of the EXTC Department at Thadomal Shahani Engineering College, Mumbai, Maharashtra, successfully held its inaugural event in 2003, marking a significant milestone in fostering innovation and collaboration. The committee emphasizes interdisciplinary cooperation, exemplified by events like the Non-Stop Hardware Hackathon, where students from diverse departments converge to share ideas and skills, enriching their problem-solving approaches.
+        </section>
+      </section>
+      <section class="abtimg">
+        <img src="./img/download.png" alt="">
+      </section>
     </section>
+
+
+    
     <section class="challenges">
         <div class="infotxt">
         <div class="h11">
@@ -95,10 +130,10 @@
         </div><br>
         <div class="h14">
             <button class="btn-reg">
-                sdfsdf  
+                Details  
             </button>
             <button class="btn-lead">
-                dsjnf
+                Register
             </button>
         </div>
 
@@ -111,20 +146,43 @@
 
         </div>
     </section>
+
     <section class="count-container">
         <p class="count" id="demo"></p>
     </section>
+
+    <section class="venue">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.983347746496!2d72.83328527586846!3d19.0644697523331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c91130392c07%3A0x3c47bf391c8de931!2sThadomal%20Shahani%20Engineering%20College!5e0!3m2!1sen!2sin!4v1723923731000!5m2!1sen!2sin" width="700" height="700" style="    box-shadow: 0px 14px 16px rgba(0, 0, 0, 0.3);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="loc">
+        <img src="./img/tsec.webp" alt="">
+        <p>hii  djcsnkdfdc</p>
+      </div>
+    </section>
+
+
+    <section class="faculty">
+        
+    </section>
+
+
+    <section class="upperfoot">
+        <section class="minifoot">
+
+        </section>
+    </section>
+
+
     <section class="footer">
         <div class="mainf1">
             <div class="F11">
                 FOLLOW US 
             </div>
             <div class="F21">
-                <i class="fa-brands fa-youtube fa-xl" style="color: #ffffff;"></i>
-                <i class="fa-brands fa-linkedin-in fa-xl" style="color: #ffffff;"></i>
-                <i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-youtube fa-2xl"></i>
+                <i class="fa-brands fa-linkedin-in fa-2xl"></i>
+                <i class="fa-brands fa-instagram fa-2xl"></i>
             </div>
-            Electroverse.Comm Copyright © 2023 - All rights reserved
+            <span>Electroverse.Comm Copyright © 2023 - All rights reserved</span>
 
         </div>
         <div class="mainf2">
@@ -142,7 +200,9 @@
             </div>
         </div>
         
-    </section>
+
 </body>
 <script src="electro.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+
 </html>
