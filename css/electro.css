@@ -2,6 +2,8 @@ body{
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+
+    /* scroll-behavior: smooth; */
 }
 
 
@@ -417,7 +419,7 @@ font: 5rem "Fira Sans", sans-serif;
 .miles-container{
     height: 250px;
     width: 100%;
-    background-color: navy;
+    background-color: #100B1D;
     color: white;
     padding-top: 30px;
 }
