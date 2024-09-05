@@ -35,6 +35,43 @@ var x = setInterval(function() {
 }, 1000);
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const abthead = document.querySelector('.abthead');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add class to trigger animation when the element is in view
+                entry.target.classList.add('animate');
+                // Optionally, unobserve the element after animation
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 }); // Adjust threshold as needed
+
+    observer.observe(abthead);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const abthead = document.querySelector('.abttxt');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add class to trigger animation when the element is in view
+                entry.target.classList.add('animate');
+                // Optionally, unobserve the element after animation
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 }); // Adjust threshold as needed
+
+    observer.observe(abttxt);
+});
+
+
+
+
 
 
 let slideIndex = 1;
