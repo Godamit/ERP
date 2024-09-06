@@ -619,10 +619,17 @@ body{
     }
 
     .venue iframe {
-        height: 150px; /* Further reduced height */
+        height: 150px; /* Reduced height */
+        width: 100vw; /* Full viewport width for small screens */
+        max-width: 100%; /* Prevent overflow */
+        margin-left: -15px; /* Align the map to the edge */
     }
 
     .venue img {
+        width: 100vw; /* Full viewport width for small screens */
+        max-width: 100%; /* Prevent overflow */
+        margin-left: -15px;
+
         margin-top: 5px; /* Adjusted margin */
     }
 
@@ -637,13 +644,14 @@ body{
 }
 
 
+
 /* map ends */
 
 
 
 /* countdown begins */
 .count-container {
-    height: 25vh; /* Slightly smaller initial height */
+    height: 25vh; /* Initial height for large screens */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -652,30 +660,32 @@ body{
 }
 
 .count {
-    font-size: 5vw; /* Responsive font size */
+    font-size: 5vw; /* Responsive font size for large screens */
     color: white;
-    font-weight: bold; /* Adjust font size for medium screens */
-
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2; /* Adjust line-height for better readability */
 }
 
-/* Media Queries for Smaller Screens */
+/* Media Queries for Medium Screens (Tablets) */
 @media (max-width: 768px) {
     .count-container {
-        height: 25vh; /* Reduce height for medium screens */
+        height: 20vh; /* Reduce height for medium screens */
     }
 
     .count {
-        font-size: 10vw;
+        font-size: 8vw; /* Increase font size to stay visible */
     }
 }
 
+/* Media Queries for Small Screens (Phones) */
 @media (max-width: 480px) {
     .count-container {
-        height: 20vh; /* Further reduce height for very small screens */
+        height: 18vh; /* Further reduce height for small screens */
     }
 
     .count {
-        font-size: 12vw; 
+        font-size: 10vw; /* Increase font size for small screens */
     }
 }
 
