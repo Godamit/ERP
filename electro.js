@@ -39,40 +39,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
+          const target = entry.target;
+
           if (entry.isIntersecting) {
-              const target = entry.target;
               // Add class to trigger animation when the element is in view
               target.classList.add('animate');
-
-              // Reset the animation by removing the class, then re-adding it
-              target.addEventListener('animationend', () => {
-                  target.classList.remove('animate');
-              }, { once: true });
+          } else {
+              // Remove the class when the element goes out of view
+              target.classList.remove('animate');
           }
       });
   }, { threshold: 0.1 }); // Adjust threshold as needed
 
   observer.observe(abthead);
 });
-
-document.addEventListener('DOMContentLoaded', function () {
-    const abthead = document.querySelector('.abttxt');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Add class to trigger animation when the element is in view
-                entry.target.classList.add('animate');
-                // Optionally, unobserve the element after animation
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 }); // Adjust threshold as needed
-
-    observer.observe(abttxt);
-});
-
-
 
 
 
@@ -123,7 +103,6 @@ plusSlides(1);
 
 
 }, 3000);
-
 
 
 
