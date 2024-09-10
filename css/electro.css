@@ -152,26 +152,35 @@ body{
 
 /* menubar starts */
 
-.menubar{
-    height: 55px;
-    background-color: white;
+.tsec-bar{
+    height: 65px;
+    background-color: black;
     /* display: flex; */
     /* padding: auto; */
     width: 100%;
 }
 
-.dicon img{
-    /* text-align: center; */
-    /* height: 200px; */
-    justify-content: center;
+.tsec-bar ul{
+    margin: 0;
+    padding: 0;
+    height: 65px;
+    overflow: hidden;
+    display: flex;
     align-items: center;
-    width: 30px;
-    margin-left: 10px;
-    margin-top: 15px;
-    
+    justify-content: space-between;
 
-    margin-top: 10px;
 }
+
+.logohead{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#tseclogo{
+    margin-top: 5px;
+    height: 50px;
+}
+
 
 
 
@@ -375,10 +384,9 @@ body{
     margin-top: 3vh; /* Use viewport height for better responsiveness */
     display: flex;
     flex-direction: row;
-    /* height: 800px; Set height relative to viewport height */
     width: 100%;
     padding: 2vw; /* Use viewport width for padding */
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
@@ -406,17 +414,10 @@ body{
     to { opacity: 1; }
 }
 
-
 .abthead.animate {
     opacity: 1; /* Final state */
     animation: fadeIn 1s ease-in-out;
 }
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
 
 .abthead h1 {
     font-size: 3rem; /* Use rem for better scaling */
@@ -444,8 +445,107 @@ body{
     object-fit: contain; /* Keep aspect ratio */
 }
 
+/* Media query for tablets and small laptops */
+@media (max-width: 1024px) {
+    .abt {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .abtimg {
+        width: 100%; /* Full width for image */
+        margin-bottom: 2vh; /* Add space between image and text */
+    }
+
+    .abtinfo {
+        width: 100%; /* Full width for text */
+        padding: 4vw;
+    }
+
+    .abthead h1 {
+        font-size: 2.5rem;
+    }
+
+    .abttxt {
+        font-size: 1.4rem;
+    }
+
+    .abtimg img {
+        height: auto; /* Allow image to scale naturally */
+        max-width: 100%;
+    }
+}
+
+/* Media query for mobile phones */
+@media (max-width: 768px) {
+    .abt {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .abtimg {
+        width: 100%; /* Full width for image on small screens */
+        margin-bottom: 2vh;
+    }
+
+    .abtinfo {
+        width: 100%; /* Full width for text */
+        padding: 5vw; /* Increase padding for small screens */
+    }
+
+    .abthead h1 {
+        font-size: 2rem;
+    }
+
+    .abttxt {
+        font-size: 1.2rem;
+    }
+
+    .abtimg img {
+        height: auto; /* Allow image to scale naturally */
+        max-width: 100%;
+    }
+}
+
+/* Media query for extra small screens */
+@media (max-width: 480px) {
+    .abtinfo {
+        padding: 6vw; /* Extra padding for very small screens */
+    }
+
+    .abthead h1 {
+        font-size: 1.8rem; /* Smaller font size for extra small screens */
+    }
+
+    .abttxt {
+        font-size: 1rem; /* Smaller text for better readability */
+    }
+
+    .abtimg img {
+        height: auto; /* Allow image to scale naturally */
+        max-width: 100%;
+    }
+}
+
+/* Media query for large desktops */
+@media (min-width: 1200px) {
+    .abthead h1 {
+        font-size: 4rem; /* Increase font size for large screens */
+    }
+
+    .abttxt {
+        font-size: 2rem; /* Larger text for better readability */
+    }
+
+    .abtimg img {
+        height: 60vh; /* Larger image for big screens */
+    }
+}
+
+
 /* Media Queries for Smaller Screens */
 @media (max-width: 768px) {
+    
     .abtinfo {
         width: 100%; /* Full width for smaller screens */
         padding: 3vw;
