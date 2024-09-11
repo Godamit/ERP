@@ -1,5 +1,18 @@
 
 
+//hamburg
+
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active'); // Toggle the 'active' class to show/hide the menu
+    });
+
+
+
+
 // countdown
 
 
@@ -23,16 +36,23 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + " Days " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  // Display the result in the respective elements
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
 
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("days").innerHTML = "0";
+    document.getElementById("hours").innerHTML = "0";
+    document.getElementById("minutes").innerHTML = "0";
+    document.getElementById("seconds").innerHTML = "0";
+    document.querySelectorAll('.label').forEach(label => label.innerHTML = "EXPIRED");
   }
 }, 1000);
+
 
 document.addEventListener('DOMContentLoaded', function () {
   const abthead = document.querySelector('.abthead');

@@ -18,33 +18,43 @@
             <p>ELECTROVERSE.COMM</p>
         </div>
         <!-- <div class="back"></div> -->
-        
-        <nav class="navbar">
-            <div class="navbar-container">
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Support</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" id="login">Login</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+      
+
+    <!-- Hamburger Icon for Mobile -->
+    <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <nav class="navbar-container">
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Events</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Support</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Login</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
     </div>
 
     <!-- <div class="back"></div> -->
     <div class="tsec-bar"></div>
+<!-- nav ends -->
+
+
+<!-- menubaar starts -->
+
 
     <div class="tsec-bar">
        <ul>
@@ -54,7 +64,7 @@
        </ul>
     </div>
 
-
+<!-- ,menu ends -->
 
     
     <div id="default-carousel" class="relative w-full" data-carousel="slide" style="background-color: #100B1D; z-index: 0;">
@@ -154,11 +164,30 @@
        
         
     </section>
-
     <section class="count-container">
-        <p class="count" id="demo"></p>
-    </section>
-
+      <div class="counthead">
+        <p>TECHATHON-2025</p>
+      </div>
+      <div class="countboxmain">
+        <div class="count-box">
+          <span class="label">Days</span>
+          <span class="time-box" id="days"></span>
+        </div>
+        <div class="count-box">
+          <span class="label">Hours</span>
+          <span class="time-box" id="hours"></span>
+        </div>
+        <div class="count-box">
+          <span class="label">Minutes</span>
+          <span class="time-box" id="minutes"></span>
+        </div>
+        <div class="count-box">
+          <span class="label">Seconds</span>
+          <span class="time-box" id="seconds"></span>
+          </div>
+      </div>
+  </section>
+  
     <section class="venue-container">
         
         <section class="venue">
