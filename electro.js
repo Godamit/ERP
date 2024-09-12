@@ -2,15 +2,16 @@
 
 //hamburg
 
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
 
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
 
-    menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active'); // Toggle the 'active' class to show/hide the menu
-    });
-
-
+navMenu.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
 
 
 // countdown
@@ -96,7 +97,7 @@ function showSlides(n) {
   let dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
-
+  
   // $(".slides").css('display','none');
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
@@ -125,6 +126,15 @@ plusSlides(1);
 }, 3000);
 
 
-
-
-
+function Scrollabt() {
+  // Get the first element with class 'abt'
+  const targetSection = document.querySelector('.abt');
+  
+  if (targetSection) {
+      targetSection.scrollIntoView({
+          behavior: 'smooth'
+      });
+  } else {
+      console.error('Element with class "abt" not found.');
+  }
+}

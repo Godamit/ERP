@@ -13,39 +13,35 @@
 </head>
 <body>
     <div class="header">
-        <div class="icons">
-            <img src="./img/logo-removebg-preview (1).png" alt="">
-            <p>ELECTROVERSE.COMM</p>
-        </div>
-        <!-- <div class="back"></div> -->
-      
+      <div class="icons">
+          <img src="./img/logo-removebg-preview (1).png" alt="">
+          <p>ELECTROVERSE.COMM</p>
+      </div>
 
-    <!-- Hamburger Icon for Mobile -->
-    <div class="menu-toggle" id="menu-toggle">
-        <i class="fas fa-bars"></i>
-    </div>
+      <div class="menu-toggle" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+      </div>
 
-    <nav class="navbar-container">
-        <ul class="nav-menu" id="nav-menu">
-            <li class="nav-item">
-                <a href="#" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Events</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Support</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Login</a>
-            </li>
-        </ul>
-    </nav>
-</header>
-
+      <nav class="navbar-container">
+          <ul class="nav-menu" id="nav-menu">
+              <li class="nav-item">
+                  <a href="#" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="nav-link" id="scrollBtn" onclick="Scrollabt()">About</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="nav-link">Events</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="nav-link">Support</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="nav-link">Login</a>
+              </li>
+          </ul>
+      </nav>
+  </div>
     </div>
 
     <!-- <div class="back"></div> -->
@@ -66,53 +62,60 @@
 
 <!-- ,menu ends -->
 
+<div class="overlay-container">
+  <div class="overlay-content">
+      <h1>ELECTROVERSE 2024</h1>
+      <p>Join us for an exciting journey of learning and collaboration.</p>
+      <a href="#register" class="register-btn">Register Now</a>
+  </div>
+</div>
     
-    <div id="default-carousel" class="relative w-full" data-carousel="slide" style="background-color: #100B1D; z-index: 0;">
-        <!-- Carousel wrapper -->
-        <div class="relative h-[70vh] md:h-[80vh] lg:h-[90vh] overflow-hidden">
-          <!-- Item 1 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="./img/WhatsApp Image 2024-09-05 at 8.11.55 PM.jpeg" class="absolute block max-w-full h-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" alt="Image 1">
-          </div>
-          <!-- Item 2 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="./img/WhatsApp Image 2024-09-05 at 8.12.40 PM (1).jpeg" class="absolute block max-w-full h-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" alt="Image 2">
-          </div>
-          <!-- Item 3 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="./img/WhatsApp Image 2024-09-05 at 8.16.51 PM.jpeg" class="absolute block max-w-full h-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" alt="Image 3">
-          </div>
-        </div>
+
+<div id="default-carousel" class="relative w-full" data-carousel="slide" style="background-color: #100B1D; z-index: 0;">
+  <!-- Carousel wrapper -->
+  <div class="relative h-[70vh] md:h-[80vh] lg:h-[90vh] overflow-hidden">
+      <!-- Item 1 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="./img/WhatsApp Image 2024-09-05 at 8.11.55 PM.jpeg" class="absolute block max-w-full h-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" alt="Image 1">
       </div>
-      
-  
-  
-        <!-- Slider indicators -->
-        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-            <!-- <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button> -->
-            <!-- <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button> -->
-        </div>
-        <!-- Slider controls -->
-        <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-                </svg>
-                <span class="sr-only">Previous</span>
-            </span>
-        </button>
-        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-                </svg>
-                <span class="sr-only">Next</span>
-            </span>
-        </button>
-    </div>
+      <!-- Item 2 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="./img/WhatsApp Image 2024-09-05 at 8.12.40 PM (1).jpeg" class="absolute block max-w-full h-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" alt="Image 2">
+      </div>
+      <!-- Item 3 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="./img/WhatsApp Image 2024-09-05 at 8.16.51 PM.jpeg" class="absolute block max-w-full h-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" alt="Image 3">
+      </div>
+  </div>
+</div>
+
+<!-- Add a new div in front of the carousel -->
+
+
+<!-- Slider indicators -->
+<div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+  <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+  <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+  <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+</div>
+
+<!-- Slider controls -->
+<button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+  <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+      <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+      </svg>
+      <span class="sr-only">Previous</span>
+  </span>
+</button>
+<button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+  <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+      <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+      </svg>
+      <span class="sr-only">Next</span>
+  </span>
+</button>
 
     <!-- <section class="space" style="height: 500px; width: 100%; background-color: black;">
         
@@ -132,6 +135,15 @@
         </section>
       </section>
       
+    </section>
+    <section class="abt-elec">
+        
+      <img src="./img/extc_department.jpg" alt="">
+      <p>Department of Electronics and Telecommunication was established in year 2002 with a clear view of a forerunner in the field of Telecommunications, the Department seeks to evolve towards excellence and adapt itself to the rapid advancements in specialized communication related fields. This Department earlier had nomenclature of Electronics Engineering from 1983 to 2001 with student intake of 120. From 2002 Student intake is 60.
+
+        At the desktop of achievements of the department, lies the award of accreditation given by the National Board of Accreditation during 2008 – 2011 and re accreditation from 2016 to 2019. The department has also started PhD. with an intake of 10 students from the academic year 2014-15.
+        
+        The curriculum of the program has been designed to cater to the ever changing needs and demands of communication industry. The focus is on holistic learning and empowering students to make significant contributions at all levels. The open elective system gives a handful of choices for students to develop expertise in their area of interest such as Neural Networks, Radar engineering, microelectronics, data compression and encryption, Satellite communication and image processing etc. It has one of the best state-of-the-art hard ware and software laboratories with special focus on telecommunication.</p>
     </section>
 
 

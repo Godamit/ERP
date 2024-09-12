@@ -2,24 +2,75 @@ body{
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-
-    /* scroll-behavior: smooth; */
 }
 
 
+
+/* The full-screen overlay with a semi-transparent background */
+    .overlay-container {
+        position: absolute;
+        top: 130px;
+        left: 0;
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 50;
+        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    }
+
+    /* The centered text content */
+    .overlay-content {
+        text-align: center;
+        color: white;
+        padding: 2rem; /* 8px padding */
+    }
+
+    /* Heading styling */
+    .overlay-content h1 {
+        font-size: 5em; /* Equivalent to text-5xl */
+        font-weight: bold;
+        margin-bottom: 1rem; /* Equivalent to mb-4 */
+    }
+
+    /* Paragraph styling */
+    .overlay-content p {
+        font-size: 1.25rem; 
+        margin-bottom: 1.5rem; 
+    }
+
+    /* Button styling */
+    .register-btn {
+        background-color: #6b46c1; /* Equivalent to bg-purple-500 */
+        color: white;
+        font-weight: bold;
+        padding: 0.5rem 1rem; /* Equivalent to py-2 px-4 */
+        border-radius: 0.25rem; /* Equivalent to rounded */
+        text-decoration: none;
+    }
+
+    /* Button hover styling */
+    .register-btn:hover {
+        background-color: #553c9a; /* Equivalent to hover:bg-purple-700 */
+    }
+
+
+/* welcome end */
+
+
+
+
+
 /* Main Header Styles */
-
-
-
 
 .header {
     height: 65px;
     background-color: #100B1D;
     display: flex;
     position: fixed;
-    z-index: 2;
+    z-index: 51; /* Increased z-index */
     width: 100vw;
-    z-index: 1;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     align-items: center;
     justify-content: space-between;
@@ -30,7 +81,6 @@ body{
 /* Logo and Text Container */
 .icons {
     height: 100%;
-    /* width: 100%; */
     display: flex;
     align-items: center;
 }
@@ -59,7 +109,6 @@ body{
 
 /* Navigation Menu */
 .nav-menu {
-
     list-style: none;
     padding: 0;
     display: flex;
@@ -94,7 +143,7 @@ body{
 }
 
 .nav-link:hover {
-    color: #ffcc00; /* Change text color on hover */
+    color: #ffcc00;
 }
 
 /* Responsive Styles */
@@ -110,6 +159,7 @@ body{
         flex-direction: column;
         width: 100%;
         align-items: center;
+        z-index: 3; /* Increased z-index to ensure it's on top */
     }
 
     .nav-item {
@@ -127,7 +177,6 @@ body{
 
     /* Toggle Menu Icon */
     .menu-toggle {
-        justify-content: right;
         display: block;
         cursor: pointer;
         font-size: 1.5em;
@@ -135,9 +184,9 @@ body{
         margin-right: 20px;
     }
 
-    /* Toggle the menu */
-    .menu-toggle.active + .nav-menu {
-        display: flex;
+    /* Display the nav menu when the active class is added */
+    .nav-menu.active {
+        display: flex; /* Show the menu when active */
     }
 }
 
@@ -153,15 +202,42 @@ body{
 }
 
 
+/* General styles for the toggle menu */
+.menu-toggle {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    font-size: 1.8em;
+    color: white;
+    position: absolute;
+    
+    right: 5px;
+}
+
+.menu-toggle i {
+    font-size: 1.8rem;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show the toggle icon on mobile */
+    }
+}
 
 /* navbar ends */
+
+
+
+
+
 
 
 /* menubar starts */
 
 .tsec-bar {
     height: 65px;
-    background-color: black;
+    background-color: #0e131f;
+    /* position: relative; */
+    /* z-index:auto; */
     width: 100%;
     display: flex;
     align-items: center;
@@ -183,8 +259,8 @@ body{
 
 .logohead {
     color: white;
-    font-size: 1.2em;
-    font-weight: bold;
+    font-size: 1.5em;
+    font-weight: bolder;
 }
 
 #tseclogo {
@@ -237,67 +313,224 @@ body{
 
 
 
-/* Toggle Menu Icon */
-.menu-toggle {
-    display: none; /* Hidden by default */
-    cursor: pointer;
-    font-size: 1.8em;
-    color: white;
-    margin-right: 20px;
+
+
+
+
+
+
+/* ABOUT PAGE */
+
+
+/* Electroverse */
+
+.abt {
+    background-color: white;
+    /* margin-top: 3vh
+    ; Use viewport height for better responsiveness */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 2vw; /* Use viewport width for padding */
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
-.menu-toggle i {
-    font-size: 1.8rem;
+.abtinfo {
+    padding: 2vw;
+    width: 50%;
+    background-color: white;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
 
-/* Responsive Styles */
+.abthead {
+    width: 100%;
+    background-color: white;
+    opacity: 0; /* Start with element hidden */
+    transition: opacity 0.5s ease-out; /* Optional: Smooth transition */
+    transform: translateY(20px); /* Start slightly below */
+}
+
+.animate {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.abthead.animate {
+    opacity: 1; /* Final state */
+    animation: fadeIn 1s ease-in-out;
+}
+
+.abthead h1 {
+    font-size: 3rem; /* Use rem for better scaling */
+    font-weight: bold;
+    margin-top: 5vh;
+}
+
+.abttxt {
+    font-size: 1rem;
+    margin-top: 3vh;
+    /* font-weight: bold; */
+}
+
+.abtimg {
+    background-color: white;
+    width: 30%;
+    height: auto; /* Ensure height adjusts based on content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abtimg img {
+    height: 50vh; /* Use vh for responsive image scaling */
+    max-width: 100%;
+    object-fit: contain; /* Keep aspect ratio */
+}
+
+/* Media query for tablets and small laptops */
+@media (max-width: 1024px) {
+    .abt {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .abtimg {
+        width: 100%; /* Full width for image */
+        margin-bottom: 2vh; /* Add space between image and text */
+    }
+
+    .abtinfo {
+        width: 100%; /* Full width for text */
+        padding: 4vw;
+    }
+
+    .abthead h1 {
+        font-size: 2.5rem;
+    }
+
+    .abttxt {
+        font-size: 1em;
+    }
+
+    .abtimg img {
+        height: auto; /* Allow image to scale naturally */
+        max-width: 100%;
+    }
+}
+
+/* Media query for mobile phones */
 @media (max-width: 768px) {
-    .nav-menu {
-        display: none; /* Hide the menu by default */
-        position: absolute;
-        top: 65px;
-        right: 0;
-        background-color: #100B1D;
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-        z-index: 1;
+    .abt {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
     }
 
-    .nav-item {
-        margin: 15px 0; /* Space between items in mobile view */
+    .abtimg {
+        width: 100%; /* Full width for image on small screens */
+        margin-bottom: 2vh;
     }
 
-    .nav-link {
-        padding: 10px 20px;
-        font-size: 1.2em;
+    .abtinfo {
+        width: 100%; /* Full width for text */
+        padding: 5vw; /* Increase padding for small screens */
     }
 
-    .nav-link::before {
-        height: 0; /* Remove underline animation on small screens */
+    .abthead h1 {
+        font-size: 2rem;
     }
 
-    /* Show the toggle icon in mobile view */
-    .menu-toggle {
-        display: block;
+    .abttxt {
+        font-size: 1.2rem;
     }
 
-    /* Display menu when toggle is active */
-    .nav-menu.active {
-        display: flex;
+    .abtimg img {
+        height: auto; /* Allow image to scale naturally */
+        max-width: 100%;
     }
 }
 
-/* Small phones */
+/* Media query for extra small screens */
 @media (max-width: 480px) {
-    .icons p {
-        font-size: 1em; /* Reduce logo text size */
+    .abtinfo {
+        padding: 6vw; /* Extra padding for very small screens */
     }
 
-    .nav-link {
-        font-size: 1em; /* Adjust font size for smaller screens */
+    .abthead h1 {
+        font-size: 1.8rem; /* Smaller font size for extra small screens */
+    }
+
+    .abttxt {
+        font-size: 1rem; /* Smaller text for better readability */
+    }
+
+    .abtimg img {
+        height: auto; /* Allow image to scale naturally */
+        max-width: 100%;
     }
 }
+
+/* Media query for large desktops */
+@media (min-width: 1200px) {
+    .abthead h1 {
+        font-size: 4rem; /* Increase font size for large screens */
+    }
+
+    .abttxt {
+        font-size: 1.5rem; /* Larger text for better readability */
+    }
+
+    .abtimg img {
+        height: 60vh; /* Larger image for big screens */
+    }
+}
+
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    
+    .abtinfo {
+        width: 100%; /* Full width for smaller screens */
+        padding: 3vw;
+    }
+
+    .abtimg {
+        width: 100%; /* Full width for smaller screens */
+        margin-top: 3vh; /* Add margin for spacing */
+    }
+
+    .abtimg img {
+        height: 40vh;
+    }
+
+    .abthead h1 {
+        font-size: 2.5rem; /* Smaller font size on mobile */
+    }
+
+    .abttxt {
+        font-size: 1.4rem; /* Adjust text size */
+    }
+}
+
+
+/* about college */
+
+.abt-elec{
+ /* height: 500px; */
+ align-items: center;
+ justify-content: center;
+ /* text-align: center; */
+ 
+ width: 100%;
+ background-color: lightblue;
+}
+
+
+
 
 
 
@@ -308,6 +541,7 @@ body{
 /* General Styles for Challenges Section */
 .challenges {
     display: flex;
+    background-color:aliceblue;
     flex-direction: row; /* Items side-by-side on larger screens */
     align-items: center;
     width: 100%;
@@ -480,7 +714,7 @@ body{
     }
 
     .infotxt .h12 {
-        font-size: 1.4em;
+        font-size: 1rem;
     }
 
     .infotxt .h13 {
@@ -496,195 +730,17 @@ body{
 
 
 /* challenge section ends */
-.abt {
-    background-color: beige;
-    margin-top: 3vh; /* Use viewport height for better responsiveness */
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding: 2vw; /* Use viewport width for padding */
-    justify-content: space-between;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-}
-
-.abtinfo {
-    padding: 2vw;
-    width: 50%;
-    background-color: beige;
-    box-sizing: border-box; /* Ensure padding is included in width calculation */
-}
-
-.abthead {
-    width: 100%;
-    background-color: beige;
-    opacity: 0; /* Start with element hidden */
-    transition: opacity 0.5s ease-out; /* Optional: Smooth transition */
-    transform: translateY(20px); /* Start slightly below */
-}
-
-.animate {
-    animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.abthead.animate {
-    opacity: 1; /* Final state */
-    animation: fadeIn 1s ease-in-out;
-}
-
-.abthead h1 {
-    font-size: 3rem; /* Use rem for better scaling */
-    font-weight: bold;
-    margin-top: 5vh;
-}
-
-.abttxt {
-    font-size: 1.6rem;
-    margin-top: 3vh;
-}
-
-.abtimg {
-    background-color: beige;
-    width: 30%;
-    height: auto; /* Ensure height adjusts based on content */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.abtimg img {
-    height: 50vh; /* Use vh for responsive image scaling */
-    max-width: 100%;
-    object-fit: contain; /* Keep aspect ratio */
-}
-
-/* Media query for tablets and small laptops */
-@media (max-width: 1024px) {
-    .abt {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items */
-    }
-
-    .abtimg {
-        width: 100%; /* Full width for image */
-        margin-bottom: 2vh; /* Add space between image and text */
-    }
-
-    .abtinfo {
-        width: 100%; /* Full width for text */
-        padding: 4vw;
-    }
-
-    .abthead h1 {
-        font-size: 2.5rem;
-    }
-
-    .abttxt {
-        font-size: 1.4rem;
-    }
-
-    .abtimg img {
-        height: auto; /* Allow image to scale naturally */
-        max-width: 100%;
-    }
-}
-
-/* Media query for mobile phones */
-@media (max-width: 768px) {
-    .abt {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items */
-    }
-
-    .abtimg {
-        width: 100%; /* Full width for image on small screens */
-        margin-bottom: 2vh;
-    }
-
-    .abtinfo {
-        width: 100%; /* Full width for text */
-        padding: 5vw; /* Increase padding for small screens */
-    }
-
-    .abthead h1 {
-        font-size: 2rem;
-    }
-
-    .abttxt {
-        font-size: 1.2rem;
-    }
-
-    .abtimg img {
-        height: auto; /* Allow image to scale naturally */
-        max-width: 100%;
-    }
-}
-
-/* Media query for extra small screens */
-@media (max-width: 480px) {
-    .abtinfo {
-        padding: 6vw; /* Extra padding for very small screens */
-    }
-
-    .abthead h1 {
-        font-size: 1.8rem; /* Smaller font size for extra small screens */
-    }
-
-    .abttxt {
-        font-size: 1rem; /* Smaller text for better readability */
-    }
-
-    .abtimg img {
-        height: auto; /* Allow image to scale naturally */
-        max-width: 100%;
-    }
-}
-
-/* Media query for large desktops */
-@media (min-width: 1200px) {
-    .abthead h1 {
-        font-size: 4rem; /* Increase font size for large screens */
-    }
-
-    .abttxt {
-        font-size: 2rem; /* Larger text for better readability */
-    }
-
-    .abtimg img {
-        height: 60vh; /* Larger image for big screens */
-    }
-}
 
 
-/* Media Queries for Smaller Screens */
-@media (max-width: 768px) {
-    
-    .abtinfo {
-        width: 100%; /* Full width for smaller screens */
-        padding: 3vw;
-    }
 
-    .abtimg {
-        width: 100%; /* Full width for smaller screens */
-        margin-top: 3vh; /* Add margin for spacing */
-    }
 
-    .abtimg img {
-        height: 40vh;
-    }
 
-    .abthead h1 {
-        font-size: 2.5rem; /* Smaller font size on mobile */
-    }
 
-    .abttxt {
-        font-size: 1.4rem; /* Adjust text size */
-    }
-}
+
+
+
+
+
 
 
 
