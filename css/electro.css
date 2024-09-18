@@ -1,4 +1,5 @@
 body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
@@ -17,42 +18,73 @@ body{
         align-items: center;
         justify-content: center;
         z-index: 50;
-        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+        /* background-color: rgba(0, 0, 0, 0.6); Semi-transparent background */
     }
-
-    /* The centered text content */
     .overlay-content {
-        text-align: center;
+        position: absolute;
+        bottom: 45px;
+        
         color: white;
-        padding: 2rem; /* 8px padding */
+        font-weight:900;
+        background-color: rgba(0, 0, 0, 0.5); /* Adds a transparent black background */
+        padding: 40px;
+        /* border-radius: 10px; */
+        /* max-width: 90%; */
+        width: 100%;
     }
-
-    /* Heading styling */
+    
     .overlay-content h1 {
-        font-size: 5em; /* Equivalent to text-5xl */
-        font-weight: bold;
-        margin-bottom: 1rem; /* Equivalent to mb-4 */
-    }
+        margin-bottom: 20px;
+        font-size: 2.5em;
 
-    /* Paragraph styling */
+    }
+    
     .overlay-content p {
-        font-size: 1.25rem; 
-        margin-bottom: 1.5rem; 
+        /* font-size: 1.2em; */
+        margin-bottom: 20px;
     }
-
-    /* Button styling */
+    
     .register-btn {
-        background-color: #6b46c1; /* Equivalent to bg-purple-500 */
-        color: white;
-        font-weight: bold;
-        padding: 0.5rem 1rem; /* Equivalent to py-2 px-4 */
-        border-radius: 0.25rem; /* Equivalent to rounded */
         text-decoration: none;
+        background-color: #28a745;
+        padding: 15px 25px;
+        color: white;
+        font-weight: bolder;
+        border-radius: 5px;
+        font-size: 1em;
+        transition: background-color 0.3s ease;
     }
-
-    /* Button hover styling */
+    
     .register-btn:hover {
-        background-color: #553c9a; /* Equivalent to hover:bg-purple-700 */
+        background-color: #218838;
+    }
+    
+    @media (min-width: 768px) {
+        .overlay-content h1 {
+            font-size: 3.5em;
+        }
+    
+        .overlay-content p {
+            font-size: 1.5em;
+        }
+    
+        .register-btn {
+            font-size: 1.2em;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .overlay-content h1 {
+            font-size: 4em;
+        }
+    
+        .overlay-content p {
+            font-size: 1.7em;
+        }
+    
+        .register-btn {
+            font-size: 1.5em;
+        }
     }
 
 
@@ -518,21 +550,75 @@ body{
 
 
 /* about college */
-
-.abt-elec{
- /* height: 500px; */
- align-items: center;
- justify-content: center;
- /* text-align: center; */
- 
- width: 100%;
- background-color: lightblue;
+/* Section Container */
+.abt-elec {
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    width: 100%;
+    background-color: aliceblue;
+    text-align: center;
 }
 
+/* Image Section */
+.depimg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
+.depimg img {
+    width: 80%;
+    align-self: center;
+}
 
+/* Text Section */
+.deptxt {
+    width: 100%;
+    padding: 90px 0; /* Adjust padding for better spacing */
+}
 
+.deptxt p{
+    font-size: 1.5rem;
+    text-align: justify;
+}
 
+.dep1 {
+    font-weight: bold;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .depimg img {
+        width: 90%; /* Adjust image size for tablets */
+    }
+
+    .dep1 {
+        font-size: 1.8rem; /* Adjust heading size */
+    }
+
+    .deptxt p {
+        font-size: 1rem;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .depimg img {
+        width: 100%; /* Full width image on small devices */
+    }
+
+    .dep1 {
+        font-size: 1.5rem; /* Smaller heading size */
+    }
+
+    .deptxt p {
+        font-size: 0.9rem;
+        line-height: 25px;
+    }
+}
 
 
 
@@ -541,12 +627,12 @@ body{
 /* General Styles for Challenges Section */
 .challenges {
     display: flex;
-    background-color:aliceblue;
+    background-color:white;
     flex-direction: row; /* Items side-by-side on larger screens */
     align-items: center;
     width: 100%;
     justify-content: space-around;
-    padding: 20px;
+    padding: 50px;
     border-bottom: solid 2px black;
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
@@ -592,8 +678,9 @@ body{
 
 .infotxt .h13 {
     font-size: 1.2em;
-    text-align: center;
+    text-align: justify;
 }
+
 
 /* Button styles */
 .btn-reg, .btn-lead {
@@ -604,7 +691,7 @@ body{
     border: solid 2px black;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    margin: 10px;
+    margin: 20px 20px;
     transition: 0.7s ease-in;
 }
 
@@ -632,7 +719,7 @@ body{
 /* Responsive Styles */
 
 /* For larger screens (Tablets, Desktops) */
-@media (min-width: 768px) {
+@media (min-width: 668px) {
     .challenges {
         flex-direction: row; /* Items side by side */
         justify-content: space-around;
@@ -649,25 +736,26 @@ body{
     }
 
     .infotxt .h11 {
-        font-size: 3em; /* Increase font size for larger screens */
+        font-size: 3.5em; /* Increase font size for larger screens */
     }
 
     .infotxt .h12 {
-        font-size: 1.8em;
+        font-size: 1.5em;
     }
 
     .infotxt .h13 {
         font-size: 1.5em;
     }
 
+
     .btn-reg, .btn-lead {
-        width: 250px; /* Larger button for bigger screens */
+        width: 200px; /* Larger button for bigger screens */
         height: 55px;
     }
 }
 
 /* Tablets and smaller (Portrait and larger phones) */
-@media (max-width: 767px) {
+@media (max-width: 669px) {
     .challenges {
         flex-direction: column; /* Stack vertically */
         align-items: center;
@@ -694,8 +782,8 @@ body{
     }
 
     .btn-reg, .btn-lead {
-        width: 200px;
-        height: 50px;
+        width: 180px;
+        height: 45px;
     }
 }
 
@@ -735,6 +823,88 @@ body{
 
 
 
+/* timeline begins */
+
+
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 40px;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #28a745;
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -40px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #28a745;
+    border: 4px solid white;
+}
+
+.timeline-item.red::before {
+    background-color: #dc3545;
+}
+
+.timeline-content {
+    background-color: #28a745;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.timeline-item.red .timeline-content {
+    background-color: #dc3545;
+}
+
+.timeline-content h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    font-size: 0.9em;
+}
+
+.green {
+    background-color: #28a745;
+}
+
+.red {
+    background-color: #dc3545;
+}
+
+
+/* timeline ends */
 
 
 
@@ -745,7 +915,8 @@ body{
 
 
 
-/* General Styles (applied to all screen sizes) */
+
+
 /* Default Styles for Venue Section */
 .venue-container {
     width: 100%;
@@ -1154,10 +1325,9 @@ body{
     align-items: center;
     padding: 20px 0; /* Add padding for spacing */
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* Footer content sections */
+
 .mainf1, .mainf2 {
     display: flex;
     flex-direction: column;
@@ -1269,7 +1439,5 @@ body{
         font-size: 1.5em; /* Adjust icon size */
     }
 }
-
-
 
 
